@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Echo回声</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon"> <!-- 添加 favicon 图标 -->
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Echo回声</h1>
+        </header>
+
+        <div class="filters">
+            <div class="filter-group" data-filter="category">
+                <h3>类别</h3>
+                <div class="filter-buttons">
+                    <button class="active">全部</button>  <!-- 新增默认全部选项 -->
+                    <button>电影</button>
+                    <button>剧集</button>
+                    <button>动漫</button>
+                </div>
+            </div>
+            
+            <!-- 类型筛选按钮组（仅保留指定类型） -->
+            <div class="filter-group" data-filter="genre">
+                <h3>类型</h3>
+                <div class="filter-buttons">
+                    <button class="active">全部</button>
+                    <button>喜剧</button>
+                    <button>爱情</button>
+                    <button>恐怖</button>
+                    <button>动作</button>
+                    <button>科幻</button>
+                    <button>剧情</button>
+                    <button>犯罪</button>
+                    <button>悬疑</button>
+                    <button>惊悚</button>
+                    <button>家庭</button>
+                    <button>冒险</button>
+                    <button>运动</button>
+                    <button>战争</button>
+                    <button>灾难</button>
+                </div>
+            </div>
+            
+            <!-- 地区筛选按钮组（修改后） -->
+            <div class="filter-group" data-filter="region">
+                <h3>地区</h3>
+                <div class="filter-buttons">
+                    <button class="active">全部</button>
+                    <button>国语</button>  <!-- 原"华语"修改 -->
+                    <button>英语</button>  <!-- 新增 -->
+                    <button>日语</button>
+                    <button>韩语</button>
+                    <button>其他</button>  <!-- 新增 -->
+                </div>
+            </div>
+            
+            <!-- 年份筛选按钮组 -->
+            <div class="filter-group" data-filter="year">
+                <h3>年份</h3>
+                <div class="filter-buttons">
+                    <button class="active" data-year="全部">全部</button>
+                    <button data-year="2025">2025</button>
+                    <button data-year="2024">2024</button>
+                    <button data-year="2023">2023</button>
+                    <button data-year="2022">2022</button>
+                    <button data-year="2021">2021</button>
+                    <button data-year="2020以前">2020以前</button>
+                </div>
+            </div>
+            
+            <!-- 排序按钮改为与筛选按钮一致的button结构 -->
+            <div class="filter-group sort-container">
+                <div class="sort-buttons">
+                    <button class="active" data-sort="latest">按最新</button>
+                    <button data-sort="rating">按评分</button>
+                </div>
+            </div>
+        </div>
+
+        <main>
+            <div id="movies-container" class="movies-grid"></div>
+        </main>
+
+        <footer>
+            <p>© 2025 Echo回声</p>
+        </footer>
+    </div>
+
+    <!-- 调整脚本加载顺序 -->
+    <script src="scripts/init.js"></script>
+    <script src="scripts/scripts.js"></script>
+</body>
+</html>
